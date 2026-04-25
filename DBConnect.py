@@ -21,7 +21,7 @@ def connect_fetch_data(table_name):
             print("Connected to the database")
             cursor = connection.cursor()
             # Fetch data from the specified table
-            cursor.execute(f"SELECT * FROM {table_name}")
+            cursor.execute(f"SELECT * FROM {table_name} limit 10")  # Limiting to 10 records for demonstration 
             records = cursor.fetchall()
             print(f"Data from {table_name}:")
             for row in records:
